@@ -1,0 +1,112 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #1e5799, #2989d8, #7db9e8, #ffffff); /* 3D animated gradient background */
+    background-size: 400% 400%; /* Increase background size for smoother animation */
+    animation: backgroundAnimation 8s infinite infinite ease-in; /* Apply animation to the background */
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+main {
+    position: relative;
+    max-width: 600px;
+   min-height: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #991e8f81, #2989d8, #17629c, #92111173); /* 3D animated gradient background */
+
+ animation: backgroundAnimation 7s ease-in-out 1.5s infinite linear ;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+@media (max-width:600px) {
+    main{
+        width: 300px;
+   min-height: 500px;
+
+    }
+  
+
+   .input-container button{
+    margin-left: -20px;
+   }
+    
+}
+
+h1 {
+    text-align: center;
+    color: #fc7c04b9;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 40px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#addBtn {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ee01b3a4, #eb6b03b9); /* Linear gradient button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#addBtn:hover {
+    background: linear-gradient(45deg, #45a049, #4CAF50); /* Adjust gradient colors on hover */
+}
+
+.todo-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-container li {
+    position: relative;
+    padding: 10px;
+    background-color: #f9f9f931;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.todo-container li:hover {
+    transform: translateX(5px);
+}
+
+.todo-container li i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #0f0f0f;
+    cursor: pointer;
+}
+
+.todo-container li i:hover {
+    color: #f44336;
+}
